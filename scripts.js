@@ -83,14 +83,26 @@
 const button = document.getElementById('convert-button')
 const select = document.getElementById('currency-select')
 
-const dolar = 5.2
-const euro = 5.9
-const btc = 467.4 
+// BIBLIOTECA
+//AXIOS
 
-const convertValues = () => {
+
+const convertValues =  async () => {
     const inputReais = document.getElementById('input-real').value
     const realValueText = document.getElementById('real-value-text')
     const currencyValueText = document.getElementById('currency-value-text')
+
+    //VAMOS INTEGRAR API DE COTAÇÕES EM TEMPO REAL, IREMOS UTILIZAR A FUNÇÃO FETCH
+
+
+    
+  const data = await  fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+   
+  const dolar = data.USDBRL.high
+  const euro = data.EURBRL.high
+  const btc = data.BTCBRL.high
+
+  
 
     realValueText.innerHTML = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
