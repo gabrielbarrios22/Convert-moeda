@@ -10,24 +10,28 @@
 
 body{
     background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
  header{
     background-color: #1B83E2;
     height: 66px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .container{
     width: 375px;
     background-color: #F4F4F4;
-    margin: 0 auto;
-    margin-top: 80px;
+
 
 }
 
 .seta{
-    margin: 15px auto;
-    display: block;
     width: 70px;
 
 }
@@ -43,8 +47,7 @@ body{
 h1{
     font-size: 24px;
     color: #F4F4F4;
-    text-align: center;
-    padding-top: 25px;
+   
 }
 
 main{
@@ -110,10 +113,17 @@ button:active{
 section{
     border: 1px solid #1B83E2;
     border-radius: 4px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .currency-container{
-    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    gap: 2px;
     padding: 10px;
 }
 
